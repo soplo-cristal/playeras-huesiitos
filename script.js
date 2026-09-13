@@ -15,16 +15,18 @@
 var TIENDA   = 'Huesitos Playeras Artesanales';
 var PRECIO   = 280;        // dama y caballero
 var PRECIO_NINO = 250;     // niño
+var PRECIO_SUDADERA = 0;   // sudaderas · falta ponerle precio
 var WHATSAPP = '525643120421';         // numero para recibir pedidos
 var RUTA_FOTOS = 'assets/productos/';
 
 var TALLAS = {
   dama:      ['CH','M','G','XG'],
   caballero: ['S','M','L','XL','2XL'],
-  nino:      ['2','4','6','8','10','12','14']
+  nino:      ['2','4','6','8','10','12','14'],
+  sudaderas: ['CH','M','G','XG']
 };
 
-var NOMBRE_SECCION = { dama:'Dama', caballero:'Caballero', nino:'Niño' };
+var NOMBRE_SECCION = { dama:'Dama', caballero:'Caballero', nino:'Niño', sudaderas:'Sudaderas' };
 
 var NOMBRE_COLECCION = {
   calaveras:'Calaveras', ajolotes:'Ajolotes', mascaras:'Máscaras',
@@ -203,7 +205,9 @@ function porId(id){
 /* Cada pieza puede traer su propio precio; si no, va el de la sección. */
 function precioDe(p){
   if(p.precio) return p.precio;
-  return p.secciones[0] === 'nino' ? PRECIO_NINO : PRECIO;
+  if(p.secciones[0] === 'nino')      return PRECIO_NINO;
+  if(p.secciones[0] === 'sudaderas') return PRECIO_SUDADERA;
+  return PRECIO;
 }
 
 function tallasDe(p){
