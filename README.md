@@ -43,17 +43,14 @@ Todo el catálogo vive en el arreglo `PRODUCTOS` al inicio de `script.js`:
   usa el dibujo ilustrado.
 - `nuevo` — pone la etiqueta rosa. `destacado` — sale en la portada.
 
-## Publicado en GitHub Pages
+## Publicado en Vercel
 
 El sitio vive en:
 
-    https://eleonardonaranjo-afk.github.io/playeras-huesiitos/
+    https://playeras-huesiitos.vercel.app
 
-Se publica solo: cada vez que algo llega a la rama `main`, GitHub vuelve a
-subir el sitio en uno o dos minutos.
-
-Para activarlo la primera vez: en el repositorio, **Settings → Pages**,
-en *Source* elegir **Deploy from a branch**, rama `main` y carpeta `/ (root)`.
+Se publica solo: cada vez que algo llega a la rama `main`, Vercel vuelve a
+subir el sitio en uno o dos minutos. No hay que hacer nada más.
 
 ## Dónde se cambia cada cosa
 
@@ -63,9 +60,9 @@ en *Source* elegir **Deploy from a branch**, rama `main` y carpeta `/ (root)`.
   precio con el campo `precio`.
 - **Fotos de producto:** ver `assets/productos/LEEME.txt`.
 - **Imagen que sale al compartir el enlace:** `assets/og.jpg`, de 1200 × 630 px.
-- **Dirección del sitio:** si algún día se usa un dominio propio, hay que
-  cambiarla en las etiquetas `canonical`, `og:url` y `og:image` de las seis
-  páginas, y agregar un archivo `CNAME` con el dominio.
+- **Dirección del sitio:** si algún día se usa un dominio propio, se conecta
+  desde el panel de Vercel y hay que cambiar las etiquetas `canonical`,
+  `og:url` y `og:image` de todas las páginas.
 
 ## Cómo funciona el carrito
 
